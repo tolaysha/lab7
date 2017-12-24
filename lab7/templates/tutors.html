@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="body1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="row centered">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Отчество</th>
+                    <th>Почта</th>
+                    <th>Телефон</th>
+                    <th>Дата рождения</th>
+                    <th>Дата начала преподавания</th>
+                    <th>Адрес</th>
+                    <th>Регион</th>
+                </tr>
+                {% for tutor in object_list %}
+                    <tr>
+                        <td>{{ tutor.id_tutor }}</td>
+                        <td>{{ tutor.name }}</td>
+                        <td>{{ tutor.surname }}</td>
+                        <td>{{ tutor.patronymic }}</td>
+                        <td>{{ tutor.email }}</td>
+                        <td>{{ tutor.tel }}</td>
+                        <td>{{ tutor.birth_date }}</td>
+                        <td>{{ tutor.date_tutoring_begin }}</td>
+                        <td>{{ tutor.address }}</td>
+                        <td>{{ tutor.region.name_region }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

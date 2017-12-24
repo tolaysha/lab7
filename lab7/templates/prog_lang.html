@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="body1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>
+                        {% for lng in data2.langs %}
+                            {% if lng.id == data1.lang.id %}
+                                <br>
+                                {{ lng.lang_name }}
+                            {% endif %}
+                        {% empty %}
+                            empty list :(
+                        {% endfor %}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-lg-8 col-lg-offset-2">
+            <p>
+                {% for lng in data2.langs %}
+                    {% if lng.id == data1.lang.id %}
+                        {{ lng.info }}
+                    {% endif %}
+                    {% empty %}
+                    empty list :(
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+{% endblock %}

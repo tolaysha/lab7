@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="body1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1><br>Сущности</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row centered">
+                <li><a href="{% url 'universities_url' %}">Университеты</a></li>
+                <li><a href="{% url 'regions_url' %}">Регионы</a></li>
+                <li><a href="{% url 'subjects_url' %}">Предметы</a></li>
+                <li><a href="{% url 'tutors_url' %}">Репетиторы</a></li>
+            </div>
+        </div>
+    </div>
+{% endblock %}

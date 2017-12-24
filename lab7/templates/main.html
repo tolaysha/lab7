@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="body1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1><br>Языки программирования<br><br><br></h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row centered">
+                {% load static %}
+                <div class="col-lg-4">
+                    <a href="{% url 'prog_lang_url' 'cpp' %}"><img src="{% static "images/C++.png" %}" width="350" height="300" alt="C++ image"/></a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="{% url 'prog_lang_url' 'java' %}"><img src="{% static "images/Java.png" %}" width="220" height="300" alt="Java image"/></a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="{% url 'prog_lang_url' 'python' %}"><img src="{% static "images/Python.png" %}" width="300" height="300" alt="Python image"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body1 %}
+    <div id="body1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="row centered">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Университет</th>
+                </tr>
+                {% for unvier in object_list %}
+                    <tr>
+                        <td>{{ unvier.id_university }}</td>
+                        <td>{{ unvier.name_university }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
